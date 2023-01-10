@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
-import { Steps } from 'antd';
+import { Steps, Button } from 'antd';
 
 const App: React.FC = () => {
   const [current, setCurrent] = useState(0);
@@ -20,25 +20,46 @@ const App: React.FC = () => {
         items={[
           {
             // 标题
-            title: 'Step 1',
+            title: '连线',
             // 子标题
-            subTitle: 'subTitle1',
-            description,
+            // subTitle: 'subTitle1',
+            description: (
+              <>
+                {/* draw icon */}
+                <Button>开始</Button>
+                {/* finish icon */}
+                <Button>结束</Button>
+                {/* clear icon */}
+                <Button>重置</Button>
+              </>
+            ),
             // 指定状态
             // status: 'wait',
             // status: 'process',
             // status: 'finish',
-            status: 'error',
+            // status: 'error',
           },
           {
-            title: 'Step 2',
-            subTitle: 'subTitle2',
-            description,
+            title: '图标',
+            // subTitle: 'subTitle2',
+            description: (
+              <>
+                {/* draw icon */}
+                <Button>设置</Button>
+                {/* clear icon */}
+                <Button>重置</Button>
+              </>
+            ),
           },
           {
-            title: 'Step 3',
-            subTitle: 'subTitle3',
-            description,
+            title: '完成',
+            // subTitle: 'subTitle3',
+            description: (
+              <>
+                <Button>保存</Button>
+                <Button>取消</Button>
+              </>
+            ),
           },
         ]}
       />
